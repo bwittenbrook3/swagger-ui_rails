@@ -1841,7 +1841,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
       var code, content, contentType, headers, pre, response_body;
       content = response.data;
       headers = response.headers;
-      if (response.headers !== null) {
+      if (typeof headers !== "undefined") {
         contentType = headers["Content-Type"] ? headers["Content-Type"].split(";")[0].trim() : null;
       } else {
         contentType = null;
